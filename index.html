@@ -13,7 +13,7 @@
         <button type="button" id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light and dark mode">
             <span id="theme-icon">🌙</span>
         </button>
-        <img src="portrait.svg" alt="Portrait of Muskan Kumari" width="120" height="120" style="width:120px; height:120px; border-radius:50%; display:block; margin: 0 auto 20px auto; object-fit: cover;" />
+        <img src="portrait.png" alt="Portrait of Muskan Kumari" width="120" height="120" class="portrait" />
         <h1 class="title">Muskan Kumari</h1>
 
         <h2 class="subtitle" style="margin-bottom: 35px;">
@@ -63,40 +63,32 @@
             <ul>
                 <li>
                     <a href="https://github.com/manojkgorle/brainfuckvm/">Ooty VM (BrainfuckVM)</a>
-                    — ETHIndia 2024 — Developed Ooty VM, a complete STARK-based zero-knowledge virtual machine in Rust that proves computational integrity of arbitrary Brainfuck ISA programs. Implemented prover and verifier from scratch, including a custom FRI (Fast Reed-Solomon IOP) pipeline, univariate polynomial arithmetic, Merkle tree commitments, Fiat–Shamir channels, and all supporting finite-field cryptography, with no external cryptographic dependencies. Enhanced the reference BrainSTARK design by using univariate quotient polynomials and parallel Lagrange interpolation for improved proving efficiency.
+                    — ETHIndia 2024 — STARK zkVM in Rust for Brainfuck: prover/verifier from scratch (custom FRI, univariate polynomials, Merkle commitments, Fiat–Shamir, finite-field crypto—no external crypto deps); univariate quotient polynomials and parallel Lagrange interpolation for faster proving vs. reference BrainSTARK
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/Zk-Market">Zk-Market</a>
-                    — ETHGlobal Singapore 2024, Rootstock track winner — Built Zk-Market, a privacy-preserving marketplace that bridges Web2 and Web3 using proxy-based ZK-TLS and the Reclaim Protocol. Designed and implemented an end-to-end system that generates zero-knowledge proofs of Web2 credentials and user data (e.g., social activity, GitHub contributions) without exposing raw information, enabling trustless on-chain verification and automated incentive distribution via smart contracts. Integrated Reclaim libraries for off-chain attestation and Hardhat-deployed contracts for proof validation and marketplace logic.
+                    — ETHGlobal Singapore 2024, Rootstock track winner — Privacy-preserving Web2/Web3 marketplace: proxy-based ZK-TLS and Reclaim to attest credentials and activity without raw data, trustless on-chain checks and incentives via Hardhat contracts
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/proofPositive">proofPositive (Zcomp)</a>
-                    — ETH Mumbai 2024, main-track winner in Zero Knowledge — Designed and implemented proofPositive (Zcomp), a modular compiler pipeline (inspired by <em>CirC</em>) that translates high-level programs written in C, Rust, Python, Solidity, and ZoKrates into optimized R1CS constraints for Groth16 proving. Developed language-specific frontends with AST parsing and CIRC-IR (EQC) intermediate representation, along with backend optimization passes, R1CS lowering, and proof synthesis using the bellman crate (supporting Groth16 and Spartan).
+                    — ETH Mumbai 2024, main-track winner in Zero Knowledge — Modular CirC-inspired compiler pipeline with frontends for C, Rust, Python, Solidity, and ZoKrates. Each path parses source to an AST, lowers through CIRC-IR existentially quantified circuits (EQC), applies backend optimization, emits R1CS, and synthesizes Groth16 proofs with bellman (Spartan also supported). The flow is end to end from high-level code through intermediate constraints to verifiable proofs, instead of authoring circuits by hand.
                 </li>
                 <li>
                     <a href="https://github.com/sausaging">Quark Layer</a>
-                    — BlocSoc R&amp;D — A decentralised proof verification and aggregation layer. Faster proof verification guarantees using cryptoeconomic security of restaked validators (soft guarantee). A hard but slow proof verification guarantee using cryptographic security of zkVMs. Aggregation for multi-proof verification and reduced on-chain verification cost, cutting cost and latency by orders of magnitude for proof verification
+                    — A decentralised proof verification and aggregation layer. Faster proof verification guarantees using cryptoeconomic security of restaked validators, called soft guarantee. A hard but slow proof verification guarantee using cryptographic security of zkVMs. Using aggregation to multi prove verifications and reduce on-chain verification costs. Reducing cost and latency by orders for proof verification(s).
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/stark101-rs">stark101-rs</a>
-                    — Rust implementation of Stark101 by StarkWare
+                    — Rust implementation of Stark101 by starkware.
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/Rust-Blockchain">Rust Blockchain</a>
-                    — Educational Peer-to-Peer Blockchain — Built a functional peer-to-peer blockchain from scratch in Rust to understand core distributed ledger concepts. Implemented Proof-of-Work mining (SHA-256 with a difficulty target), block and chain sync over libp2p (TCP transport with Noise, Floodsub pub/sub, mDNS peer discovery), per-block validation, longest-valid-chain fork resolution, and multi-node synchronization. Designed a command-line interface supporting peer discovery (ls p), chain inspection (ls c), and block creation with network-wide propagation (create b).
+                    — Built a fully functional peer-to-peer blockchain in Rust implementing Proof-of-Work mining (SHA-256), libp2p networking (TCP + Noise, Floodsub pub/sub, mDNS discovery), block validation, longest-chain fork resolution, and multi-node synchronization. Developed a custom CLI supporting peer discovery (ls p), chain inspection (ls c), and block creation with network-wide propagation (create b).
                 </li>
                 <li>
                     Zkin.gen
                     — ETHIndia 2023 — Decentralised platform concept for user-owned genetic data, emphasising privacy and reducing reliance on centralised genetic-testing platforms
                 </li>
-            </ul>
-
-            <h2>Positions of responsibility</h2>
-            <ul>
-                <li>President, Blockchain Society, IIT Delhi (Apr 2025 – present).</li>
-                <li>Coordinator, Blockchain Society, IIT Delhi — research initiatives and workshops (Apr 2024 – Mar 2025).</li>
-                <li>Executive, Blockchain Society, IIT Delhi — workshops on blockchain fundamentals (Jun 2023 – May 2024).</li>
-                <li>Vice Captain (Football), Himadri hostel, BHM — inter-hostel tournaments and training coordination (Jun 2023 – May 2024).</li>
             </ul>
 
             <h2>Writings</h2>
@@ -116,11 +108,6 @@
                 <li>JEE Advanced 2022: AIR 1147 (GE), AIR 8928 overall among qualified candidates.</li>
                 <li>JEE Mains 2022: 98.3 percentile among 1.1M+ candidates.</li>
                 <li>Cryptography Summer School (2025): certified participant — ZK proofs, SNARKs, MPC, FHE, blockchain.</li>
-            </ul>
-
-            <h2>Extra curricular</h2>
-            <ul>
-                <li>1st position, inter-hostel football; winner, British High Commission Shield; winner, BSA General Championship Trophy.</li>
             </ul>
 
             <h2>Currently, I am interested on</h2>
