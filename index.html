@@ -42,7 +42,7 @@
                         <li>Designed and implemented a privacy-preserving cross-chain bridge on NEAR Intents, used ephemeral keypairs and HKDF-derived keys to ensure source and destination transactions remain unlinkable on-chain, eliminating visible cross-chain actor graphs.</li>
                         <li>Built a production-grade Solana data indexer in Rust with Diesel ORM, handling complete historical backfills and real-time ingestion from RPC streams. Delivered consistent, queryable historical state for private transaction history and on-chain event reconstruction.</li>
                         <li>Solana Gasless Relayer: Developed a RESTful relayer service allowing users to pay fees in SPL tokens via Jupiter pricing integration. Implemented Redis-backed rate limiting and automated fee-payer signing.</li>
-                        <li>Led end-to-end implementation of the Groth16 trusted setup (Umbra Phase 2) in Rust with snarkjs: Postgres-backed coordinator, Redis HMAC-signed job queue, Axum HTTP/WebSocket API, concurrent workers for powers-of-tau / R1CS / zkey processing, S3 artifact storage, timeout watchdogs, dead-letter queues, and API rate limiting. Dual-mode participant CLI (TUI and headless) for parallel multi-circuit contributions.</li>
+                        <li>Led end-to-end implementation of the Groth16 trusted setup (Phase 2) in Rust with snarkjs: Postgres-backed coordinator, Redis HMAC-signed job queue, Axum HTTP/WebSocket API, concurrent workers for powers-of-tau / R1CS / zkey processing, S3 artifact storage, timeout watchdogs, dead-letter queues, and API rate limiting. Dual-mode participant CLI (TUI and headless) for parallel multi-circuit contributions.</li>
                     </ul>
                 </li>
                 <li>
@@ -53,7 +53,7 @@
                         <li>Implemented relaxed discrete-log DKG and Pedersen verifiable secret sharing for trustless key management.</li>
                         <li>Implemented a Bulletproofs-style protocol tailored for Solana, enabling efficient zero-knowledge range proofs.</li>
                         <li>Worked with elliptic-curve accumulators for privacy-preserving integrity checks and verifiable state consistency.</li>
-                        <li>Led research and implementation across multiple schemes including ECIES and ElGamal.</li>
+                        <li>Led research and implementation across multiple encryption schemes, including ECIES and ElGamal.</li>
                     </ul>
                 </li>
             </ul>
@@ -63,27 +63,27 @@
             <ul>
                 <li>
                     <a href="https://github.com/manojkgorle/brainfuckvm/">Ooty VM (BrainfuckVM)</a>
-                    — ETHIndia 2024 — Rust implementation of a BrainSTARK-style zkVM: prover and verifier for the Brainfuck ISA using STARKs, with foundational crates including a custom FRI (Fast Reed-Solomon IOP of Proximity) pipeline and supporting cryptography from scratch
+                    — ETHIndia 2024 — Developed Ooty VM, a complete STARK-based zero-knowledge virtual machine in Rust that proves computational integrity of arbitrary Brainfuck ISA programs. Implemented prover and verifier from scratch, including a custom FRI (Fast Reed-Solomon IOP) pipeline, univariate polynomial arithmetic, Merkle tree commitments, Fiat–Shamir channels, and all supporting finite-field cryptography, with no external cryptographic dependencies. Enhanced the reference BrainSTARK design by using univariate quotient polynomials and parallel Lagrange interpolation for improved proving efficiency.
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/Zk-Market">Zk-Market</a>
-                    — ETHGlobal Singapore 2024 — Rootstock track winner — Marketplace bridging Web2 and Web3 using ZK (proxy-based ZK-TLS, Reclaim Protocol, on-chain verification of Web2-derived claims without exposing raw data)
+                    — ETHGlobal Singapore 2024, Rootstock track winner — Built Zk-Market, a privacy-preserving marketplace that bridges Web2 and Web3 using proxy-based ZK-TLS and the Reclaim Protocol. Designed and implemented an end-to-end system that generates zero-knowledge proofs of Web2 credentials and user data (e.g., social activity, GitHub contributions) without exposing raw information, enabling trustless on-chain verification and automated incentive distribution via smart contracts. Integrated Reclaim libraries for off-chain attestation and Hardhat-deployed contracts for proof validation and marketplace logic.
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/proofPositive">proofPositive (Zcomp)</a>
-                    — ETH Mumbai 2024 — Main-track winner in Zero Knowledge (~15k participants) — Compiler pipeline inspired by <em>CirC</em> compiling high-level programs to R1CS with Groth16 proving/verification (bellman and related backends); frontends for C, Rust, Python, Solidity, ZoKrates; extensible toward FHE and MPC-style targets
+                    — ETH Mumbai 2024, main-track winner in Zero Knowledge — Designed and implemented proofPositive (Zcomp), a modular compiler pipeline (inspired by <em>CirC</em>) that translates high-level programs written in C, Rust, Python, Solidity, and ZoKrates into optimized R1CS constraints for Groth16 proving. Developed language-specific frontends with AST parsing and CIRC-IR (EQC) intermediate representation, along with backend optimization passes, R1CS lowering, and proof synthesis using the bellman crate (supporting Groth16 and Spartan).
                 </li>
                 <li>
                     <a href="https://github.com/sausaging">Quark Layer</a>
-                    — BlocSoc R&amp;D — Decentralised proof verification and aggregation for zk proofs (fast “soft” cryptoeconomic guarantees and slower “hard” cryptographic guarantees); ecosystem verifiers for Succinct SP1, RISC Zero, Polygon Miden, Jolt, and related stacks
+                    — BlocSoc R&amp;D — A decentralised proof verification and aggregation layer. Faster proof verification guarantees using cryptoeconomic security of restaked validators (soft guarantee). A hard but slow proof verification guarantee using cryptographic security of zkVMs. Aggregation for multi-proof verification and reduced on-chain verification cost, cutting cost and latency by orders of magnitude for proof verification
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/stark101-rs">stark101-rs</a>
-                    — Rust port of StarkWare’s Stark101 educational prover/verifier with parallel Lagrange interpolation and a Fibonacci-square style verifier workflow
+                    — Rust implementation of Stark101 by StarkWare
                 </li>
                 <li>
-                    <a href="https://github.com/m-pandey5/Rust-Blockchain">Rust-Blockchain</a>
-                    — Educational peer-to-peer blockchain in Rust (mining, broadcast, chain sync); intended for learning, not production
+                    <a href="https://github.com/m-pandey5/Rust-Blockchain">Rust Blockchain</a>
+                    — Educational Peer-to-Peer Blockchain — Built a functional peer-to-peer blockchain from scratch in Rust to understand core distributed ledger concepts. Implemented Proof-of-Work mining (SHA-256 with a difficulty target), block and chain sync over libp2p (TCP transport with Noise, Floodsub pub/sub, mDNS peer discovery), per-block validation, longest-valid-chain fork resolution, and multi-node synchronization. Designed a command-line interface supporting peer discovery (ls p), chain inspection (ls c), and block creation with network-wide propagation (create b).
                 </li>
                 <li>
                     Zkin.gen
@@ -99,17 +99,9 @@
                 <li>Vice Captain (Football), Himadri hostel, BHM — inter-hostel tournaments and training coordination (Jun 2023 – May 2024).</li>
             </ul>
 
-            <h2>Technical skills</h2>
-            <p>
-                Languages &amp; tools: Java, Python, Solidity, Rust; Autodesk Inventor, SolidWorks, Microsoft Office.
-                <br>ML &amp; data: TensorFlow, PyTorch, scikit-learn, pandas, NumPy, Matplotlib, XGBoost, Graphviz.
-                <br>Web3: EVM, Hardhat, Ethers, Web3.js, Foundry; EIPs, ERC-20/721 patterns, Dapp fundamentals.
-                <br>Zero knowledge: Groth16 (incl. RareSkills-oriented study), SNARK-friendly FRI in Python, hands-on STARK-style proving workflows.
-            </p>
-
             <h2>Writings</h2>
             <ul>
-                <li><a href="https://hackmd.io/CvkubZOBR9CCGu6oR4sEvQ">Ooty zkVM: Rust version of BrainSTARK — Part 1</a> — Introduction to zkVMs, ZKPs, virtual machines, and the Brainfuck ISA; co-authored with <a href="https://x.com/soumyathakur44">Soumya Thakur</a>; ties to <a href="https://github.com/manojkgorle/brainfuckvm/">Ooty VM</a>.</li>
+                <li><a href="https://hackmd.io/CvkubZOBR9CCGu6oR4sEvQ">Ooty zkVM: Rust version of BrainSTARK — Part 1</a> — Introduction to zkVMs, ZKPs, virtual machines, and the Brainfuck ISA.</li>
                 <li><a href="https://hackmd.io/hNc2CHyGSvuyaQce2eLxfw">Prerequisites for STARKs</a> — Goldilocks field, roots of unity, Lagrange interpolation, Schwartz–Zippel, Merkle commitments, a full Fibonacci-square STARK walkthrough (LDE, constraints, composition, FRI), and Fiat–Shamir.</li>
                 <li><a href="https://hackmd.io/abNVTppbSXCd5dSNUIJo2w">PLONK-style arithmetization</a> — PAIRs (preprocessed AIR), RAPs, multiset checks, permutation and evaluation arguments used in BrainSTARK-style designs.</li>
                 <li><a href="https://hackmd.io/@Muskan05/rJ-exWiLJl">STARK Engine</a> — How the Brainfuck zk-STARK engine fits together: VM ↔ prover ↔ verifier, register trace, and the processor, instruction, memory, and IO tables that the proof system reasons over.</li>
@@ -128,7 +120,7 @@
 
             <h2>Extra curricular</h2>
             <ul>
-                <li>1st position, inter-hostel football; winner, British High Commission Shield; winner, BSA General Championship Trophy; participant, ETHIndia.</li>
+                <li>1st position, inter-hostel football; winner, British High Commission Shield; winner, BSA General Championship Trophy.</li>
             </ul>
 
             <h2>Currently, I am interested on</h2>
