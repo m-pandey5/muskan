@@ -1,0 +1,94 @@
+.title {
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 60px auto;
+    max-width: 700px;
+    background-color: black;
+    color: white;
+}
+
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 18px;
+}
+
+a:link,
+a:visited {
+    color: #00b300;
+}
+
+body.light a:link,
+body.light a:visited {
+    color: #006400;
+}
+
+code,
+.code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 85%;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+}
+
+body.dark code,
+body.dark .code {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    font-size: 1.5rem;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+}
+
+.theme-toggle.light {
+    background: #eee;
+    color: #222;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
