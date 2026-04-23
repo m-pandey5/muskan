@@ -26,9 +26,9 @@
         <div>
             <h2>About me</h2>
             <p>
-                I am a researcher and developer with a focus on zero-knowledge proofs, STARKs and SNARKs, zkVMs and arithmetization, private bridges and intent-based cross-chain execution, NEAR and Solana systems, on-chain data indexing in Rust, threshold cryptography and key management, proof verification and aggregation, high-throughput blockchain infrastructure, privacy-preserving protocols and accumulators, and gasless / fee-abstraction relayers for Solana.
+                I am a researcher and developer with a focus on zero-knowledge proofs, STARKs and SNARKs, zkVMs and arithmetization, private bridges and intent-based cross-chain execution, NEAR and Solana systems, threshold cryptography and key management, proof verification and aggregation, high-throughput blockchain infrastructure, privacy-preserving protocols and accumulators.
                 <br><br>
-                I am currently in my final year of my Bachelors at <a href="https://home.iitd.ac.in/">I.I.T Delhi</a>. I am the Overall Coordinator of the <a href="https://blocsoc.in/">Blockchain Society at I.I.T Delhi</a>, leading a team of 25+ members across research, workshops, and initiatives.
+                I am currently in my final year of my Bachelors at <a href="https://home.iitd.ac.in/">I.I.T Delhi</a>. I am the President of the <a href="https://blocsoc.in/">Blockchain Society at I.I.T Delhi</a>.
                 <br><br>
                 I have worked as a Cryptography Research Engineer at <strong>Encifher</strong>, and as a Backend Engineer at <strong>Umbra Privacy</strong>.
             </p>
@@ -38,11 +38,11 @@
             <ul>
                 <li>
                     <strong>Umbra Privacy</strong>: Backend Engineer (December 2025 – April 2026)
-                    <p>Backend work on a privacy-oriented cross-chain stack: NEAR Intents for intent-based execution, a production-grade Solana indexer in Rust for on-chain data, and a Solana gasless relayer (g-relayer) service.</p>
                     <ul>
-                        <li><strong>Private bridge (NEAR Intents)</strong>: I implemented a complete private bridge on top of NEAR’s intent system, routing user and protocol flows so that assets can move from any supported chain to any supported chain. The design uses an ephemeral keypair and keys derived with HKDF so that, when bridging, there is no on-chain linkability between source and destination—settlement and contracts stay correct for solvers and policy, but the on-chain graph does not reveal a traceable public link across domains. I owned the backend for composing intents with bridge logic, solvers, and checks so metadata exposure stays within the threat model, while staying compatible with NEAR’s intent and solver ecosystem.</li>
-                        <li><strong>Solana data indexer (Rust, Diesel)</strong>: built a Solana data indexer in Rust that ingests on-chain state and activity (RPC and streaming, transactions, instruction traces, program accounts) and stores it with the Diesel ORM. I implemented end-to-end backfilling of historical events (including the full backfill and recovery flows), with gap repair, reorg- / fork-aware handling, and checkpointed pipelines so the service can be restarted safely; downstream use includes bridge monitoring, replay, and idempotent re-processing.</li>
-                        <li><strong>g-relayer (Solana gasless relayer, Rust)</strong>: implemented a REST API where the relayer signs as the fee payer and submits transactions, so end users can sign without holding SOL: the relayer covers network fees and can be reimbursed in another token via a payment instruction. The service exposes JSON endpoints (for example config and payer info, health, supported tokens, fee estimation, building partially built transactions, signing, and sign-and-submit), with optional features such as Prometheus metrics, Redis-backed rate limits, and a Jupiter-based pricing feature for token-denominated fees. Configuration (RPC URL, key material, server port, rate limits, validation rules such as allow-listed programs, caps on lamports and signature count, and allow-listed SPL “pay the relayer” tokens) is driven by a TOML file or environment. The end-to-end flow is client-driven for blockhashes: the relayer can return unsigned transactions with a placeholder blockhash, the user or client replaces it with a recent blockhash and applies partial signing, and the relayer then completes fee-payer signing and submission after a validation pass—keeping blockhash sourcing explicit on the user side rather than the relayer.</li>
+                        <li>Designed and implemented a privacy-preserving cross-chain bridge on NEAR Intents, used ephemeral keypairs and HKDF-derived keys to ensure source and destination transactions remain unlinkable on-chain, eliminating visible cross-chain actor graphs.</li>
+                        <li>Built a production-grade Solana data indexer in Rust with Diesel ORM, handling complete historical backfills and real-time ingestion from RPC streams. Delivered consistent, queryable historical state for private transaction history and on-chain event reconstruction.</li>
+                        <li>Solana Gasless Relayer: Developed a RESTful relayer service allowing users to pay fees in SPL tokens via Jupiter pricing integration. Implemented Redis-backed rate limiting and automated fee-payer signing.</li>
+                        <li>Led end-to-end implementation of the Groth16 trusted setup (Umbra Phase 2) in Rust with snarkjs: Postgres-backed coordinator, Redis HMAC-signed job queue, Axum HTTP/WebSocket API, concurrent workers for powers-of-tau / R1CS / zkey processing, S3 artifact storage, timeout watchdogs, dead-letter queues, and API rate limiting. Dual-mode participant CLI (TUI and headless) for parallel multi-circuit contributions.</li>
                     </ul>
                 </li>
                 <li>
@@ -63,37 +63,37 @@
             <ul>
                 <li>
                     <a href="https://github.com/manojkgorle/brainfuckvm/">Ooty VM (BrainfuckVM)</a>
-                    — ETHIndia 2024 (Nov–Dec 2024). Rust implementation of a BrainSTARK-style zkVM: prover and verifier for the Brainfuck ISA using STARKs, with foundational crates including a custom FRI (Fast Reed-Solomon IOP of Proximity) pipeline and supporting cryptography from scratch. Co-contributors include <a href="https://x.com/ManojKGorle">Manoj K Gorle</a> and <a href="https://x.com/soumyathakur44">Soumya Thakur</a>.
+                    — ETHIndia 2024 — Rust implementation of a BrainSTARK-style zkVM: prover and verifier for the Brainfuck ISA using STARKs, with foundational crates including a custom FRI (Fast Reed-Solomon IOP of Proximity) pipeline and supporting cryptography from scratch
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/Zk-Market">Zk-Market</a>
-                    — ETHGlobal Singapore 2024 (Sep–Oct 2024). Rootstock track winner. A marketplace bridging Web2 and Web3 using ZK: proxy-based ZK-TLS, Reclaim Protocol integration, and on-chain verification of Web2-derived claims without exposing raw data.
+                    — ETHGlobal Singapore 2024 — Rootstock track winner — Marketplace bridging Web2 and Web3 using ZK (proxy-based ZK-TLS, Reclaim Protocol, on-chain verification of Web2-derived claims without exposing raw data)
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/proofPositive">proofPositive (Zcomp)</a>
-                    — ETH Mumbai 2024 (Mar–Apr 2024). Main-track winner in Zero Knowledge (best project among ~15k participants). A compiler pipeline inspired by <em>CirC</em> to compile high-level programs to R1CS and prove/verify (Groth16 via bellman and related backends). Frontends toward C, Rust, Python, Solidity, ZoKrates; extensible toward FHE and MPC-style targets.
+                    — ETH Mumbai 2024 — Main-track winner in Zero Knowledge (~15k participants) — Compiler pipeline inspired by <em>CirC</em> compiling high-level programs to R1CS with Groth16 proving/verification (bellman and related backends); frontends for C, Rust, Python, Solidity, ZoKrates; extensible toward FHE and MPC-style targets
                 </li>
                 <li>
                     <a href="https://github.com/sausaging">Quark Layer</a>
-                    — BlocSoc R&amp;D (2024–25). Decentralised proof verification and aggregation layer for zk proofs: fast “soft” cryptoeconomic guarantees and slower “hard” cryptographic guarantees. Ecosystem work with verifiers for systems such as Succinct SP1, RISC Zero, Polygon Miden, Jolt, and related stacks (see <a href="https://github.com/sausaging">Quark org on GitHub</a>).
+                    — BlocSoc R&amp;D — Decentralised proof verification and aggregation for zk proofs (fast “soft” cryptoeconomic guarantees and slower “hard” cryptographic guarantees); ecosystem verifiers for Succinct SP1, RISC Zero, Polygon Miden, Jolt, and related stacks
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/stark101-rs">stark101-rs</a>
-                    — Rust port of StarkWare’s Stark101 educational prover/verifier, with parallel Lagrange interpolation and a Fibonacci-square style verifier workflow.
+                    — Rust port of StarkWare’s Stark101 educational prover/verifier with parallel Lagrange interpolation and a Fibonacci-square style verifier workflow
                 </li>
                 <li>
                     <a href="https://github.com/m-pandey5/Rust-Blockchain">Rust-Blockchain</a>
-                    — Educational peer-to-peer blockchain in Rust (mining, broadcast, chain sync); intended for learning, not production.
+                    — Educational peer-to-peer blockchain in Rust (mining, broadcast, chain sync); intended for learning, not production
                 </li>
                 <li>
                     Zkin.gen
-                    — ETHIndia 2023 (Nov–Dec 2023). Decentralised platform concept for user-owned genetic data, emphasising privacy and reducing reliance on centralised genetic-testing platforms.
+                    — ETHIndia 2023 — Decentralised platform concept for user-owned genetic data, emphasising privacy and reducing reliance on centralised genetic-testing platforms
                 </li>
             </ul>
 
             <h2>Positions of responsibility</h2>
             <ul>
-                <li>Overall Coordinator, Blockchain Society, IIT Delhi — leading 25+ members across research and operations (Apr 2025 – present).</li>
+                <li>President, Blockchain Society, IIT Delhi (Apr 2025 – present).</li>
                 <li>Coordinator, Blockchain Society, IIT Delhi — research initiatives and workshops (Apr 2024 – Mar 2025).</li>
                 <li>Executive, Blockchain Society, IIT Delhi — workshops on blockchain fundamentals (Jun 2023 – May 2024).</li>
                 <li>Vice Captain (Football), Himadri hostel, BHM — inter-hostel tournaments and training coordination (Jun 2023 – May 2024).</li>
