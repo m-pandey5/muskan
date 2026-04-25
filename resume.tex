@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\renewcommand{\arraystretch}{1.08}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+\titleformat{\section}{\normalsize\bfseries\MakeUppercase}{\thesection}{0em}{}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+
+\newcommand{\resumeSubheading}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
+}
+
+\begin{document}
+
+{\LARGE \textbf{MUSKAN KUMARI}}\\[4pt]
+
+\section*{Academic Details}
+\begin{tabular}{>{\bfseries}p{0.17\linewidth} p{0.31\linewidth} p{0.34\linewidth} p{0.14\linewidth}}
+Year & Degree / Board & Institute & GPA / Marks \\
+\hline
+--- & B.Tech in Mechanical Engineering & Indian Institute of Technology Delhi & 7.13 \\
+2021 & CBSE & S.R. Century School & 96.6\% \\
+2019 & HBSE & Sports Sainik Public School & 9.40 \\
+\end{tabular}
+
+\section*{Scholastic Achievements}
+\begin{itemize}
+  \item ETH-Global Singapore Hackathon: ZK-Market won the Rootstock track for the best project award (2024).
+  \item ETH-Mumbai Hackathon: Won the main track in Zero Knowledge, Best project award out of 15,000 participants (2024).
+  \item JEE Advanced Rank: AIR 1147 (GE), AIR 8928 among 0.2 million qualified candidates (2022).
+  \item JEE Mains Score: 98.3 percentile among more than 1.1 million candidates (2022).
+  \item Certified participant in Cryptography Summer School, covering ZK proofs, SNARKs, MPC, FHE, and blockchain (2025).
+\end{itemize}
+
+\section*{Internship}
+\resumeSubheading{Encifher}{May 2025 -- July 2025}{Cryptography Research Engineer}{}
+\begin{itemize}
+  \item Designed a Rust-based Key Management System (KMS) using threshold ElGamal encryption.
+  \item Implemented relaxed discrete log DKG and Pedersen Verifiable Secret Sharing for trustless key management.
+  \item Implemented a Bulletproof protocol tailored for Solana for efficient zero-knowledge range proofs.
+  \item Worked with elliptic curve accumulators to build privacy-preserving integrity checks with verifiable state consistency.
+  \item Led research and implementation of encryption schemes including ECIES and ElGamal.
+\end{itemize}
+
+\section*{Projects}
+\resumeSubheading{BrainfuckVM | ETH-India 2024}{Nov 2024 -- Dec 2024}{}{}
+\begin{itemize}
+  \item Designed and implemented prover and verifier for a BrainSTARK zero-knowledge virtual machine in Rust.
+  \item Built foundational ZKVM libraries, including a custom implementation of FRI.
+  \item Built supporting crates from scratch for secure systems programming and cryptographic protocols.
+\end{itemize}
+
+\resumeSubheading{Zk-Market | ETH-Global Singapore 2024}{Sep 2024 -- Oct 2024}{}{}
+\begin{itemize}
+  \item Built a marketplace bridging Web2 and Web3 using zero-knowledge proofs.
+  \item Leveraged ZK-TLS to establish secure connections with Web3 networks for privacy and trustless verification.
+  \item Enabled on-chain verification of Web2 data using proxy-based ZK-TLS with Reclaim Protocol.
+  \item Facilitated seamless Web2-to-Web3 data transfer for secure marketplace interactions.
+\end{itemize}
+
+\resumeSubheading{Zero-Knowledge Compiler | ETH-Mumbai 2024}{Mar 2024 -- Apr 2024}{}{}
+\begin{itemize}
+  \item Worked from the paper \textit{CirC: Compiler infrastructure for proof systems, software verification, and more}.
+  \item Developed a compiler for generating and verifying proofs of high-level language computations.
+  \item Implemented support for C, Rust, Python, Solidity, and ZoKrates, compiling to R1CS (Groth16).
+  \item Designed an extensible backend to support cryptosystems including FHE and MPC.
+\end{itemize}
+
+\resumeSubheading{Quark Layer | BlocSoc R\&D}{Apr 2024 -- Mar 2025}{}{}
+\begin{itemize}
+  \item Built a decentralized proof verification and aggregation layer for zero-knowledge proofs.
+  \item Provided near-instant soft crypto-economic guarantees and delayed cryptographic guarantees.
+  \item Added support for Succinctlabs SP1, RISC Zero zkVM, Polygon Miden, and Jolt for interoperability.
+\end{itemize}
+
+\resumeSubheading{Zkin.gen | ETH-India Hackathon 2023}{Nov 2023 -- Dec 2023}{}{}
+\begin{itemize}
+  \item Built a decentralized platform for ownership and control of genetic data.
+  \item Improved privacy and addressed concerns of centralized genetic-testing platforms.
+\end{itemize}
+
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Programming Languages \& Tools:} Java, Python, Solidity, Rust, Autodesk Inventor, SolidWorks, MS Office.
+  \item \textbf{Libraries:} TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Circom, Matplotlib, Graphviz, XGBoost.
+  \item \textbf{Web3 Development \& Frameworks:} EVM, Hardhat, Ethers, Web3.js, Foundry (Solidity), EIPs, NFT and ERC20 standards, dApp infrastructure.
+  \item \textbf{Zero Knowledge:} Hands-on with Groth16 and FRI protocol implementations.
+\end{itemize}
+
+\section*{Positions of Responsibility}
+\begin{itemize}
+  \item Overall Coordinator, Blockchain Society, IIT Delhi: Leading a team of 25+ members and overseeing research (Apr 2025 -- Present).
+  \item Coordinator, Blockchain Society, IIT Delhi: Led research initiatives/projects and organized workshops (Apr 2024 -- Mar 2025).
+  \item Executive, Blockchain Society, IIT Delhi: Organized and led workshops on blockchain fundamentals (Jun 2023 -- May 2024).
+  \item Vice Captain (Football), Himadri, BHM: Led inter-hostel squad, coordinated training, and fostered team spirit (Jun 2023 -- May 2024).
+\end{itemize}
+
+\section*{Additional IIT Information}
+\begin{itemize}
+  \item Degree: B.Tech in Mechanical Engineering, IIT Delhi; CGPA 7.13; Department Rank 47.
+  \item Qualifying Exam: JEE Advanced Rank 1147 (GE).
+  \item Key coursework: Intro to Electrical Engineering, Calculus, Electromagnetic Waves \& Quantum Mechanics, Intro to Computer Science, Professional Ethics \& Social Responsibility, Language \& Writing Skills, Engineering Visualization \& Communication, Linear Algebra \& Differential Equations, Intro to Statistics, Data Structures and Algorithms, Mechanical Engineering Drawing.
+\end{itemize}
+
+\end{document}
